@@ -1,0 +1,14 @@
+<%- include("partials/SeperateH"); -%>
+<div class="details">
+  <form class="" action="/customers" method="post">
+  <p name="sender"><b style="font-size:9rem;"><%= title%></b></p>
+  <p><%= email%></p>
+  <p>$<%= balance%></p>
+  <input type="hidden" type="hidden" name="sender" value="<%= title%>">
+  <input type="number" name="money" value="">
+  <!-- <p>Amount</p>
+  <input type="number" name="" value=""> -->
+  <button type="submit" name="button">Send Money</button>
+  </form>
+</div>
+<%- include("partials/SeperateF"); -%>

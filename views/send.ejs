@@ -1,0 +1,29 @@
+<%- include("partials/headers"); -%>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Balance</th>
+      <th>Where to Send</th>
+    </tr>
+
+      <% for (var i = 0; i < customers.length; i++) { %>
+        
+      <tr>
+        <form class="" action="/send" method="post">
+          <td><%= customers[i].title%></td>
+          <td><em><%= customers[i].email%></em></td>
+          <td>$<%= customers[i].balance%></td>
+          <input type="hidden" name="reciever" value="<%= customers[i].title%>">
+          <input type="hidden" name="money" value="<%= money%>">
+          <td><button type="submit" name="button">Select</button></td>
+        </form>
+
+      </tr>
+      <%}%>
+  </table>
+
+
+
+<%- include("partials/footer"); -%>
